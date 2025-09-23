@@ -1,12 +1,9 @@
-INSERT INTO students (id, name, age, department, grade)
+INSERT INTO books(book_id,title,author,price,stock)
 VALUES
-(1,'Rena',20,'ComputerScience',85),
-(2,'Ayisha',21,'Physics',95),
-(3,'Abhi',22,'English',90),
-(4,'Vivek',23,'Mathematics',76);
+('1','Geetanjali','Rabindra Nath Tagore','400','10'),
+('2','Adventures of Tom Swayer','Mark Twain','600','5'),
+('3','Anna Karenina','Leo Tolstoy','300','8');
+UPDATE books SET price+50,stock=12 WHERE title='Learn SQL';
+UPDATE books SET stock=stock-2 WHERE price>500;
+DELETE FROM books WHERE book_id=3;
 
-
-SELECT*FROM students WHERE age > 20;
-SELECT*FROM students WHERE department IN ('Physics', 'ComputerScience');
-SELECT*FROM students WHERE grade = 90;
-SELECT*FROM students WHERE grade BETWEEN 70 AND 90;
