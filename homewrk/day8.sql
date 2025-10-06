@@ -1,1 +1,17 @@
-
+CREATE DATABASE BookStoreDB;
+USE BookStore;
+CREATE TABLE Authors(
+    id INT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    COUNTRY VARCHAR(50) NOT NULL
+);
+CREATE TABLE Books(
+    Book_Id INT PRIMARY KEY,
+    Title VARCHAR(650) NOT NULL,
+    Price INT NOT NULL,
+    Autor_id INT
+);
+ALTER TABLE Books
+ADD Publshed_year INT;
+TRUNCATE TABLE  Books;
+DROP TABLE Books;
